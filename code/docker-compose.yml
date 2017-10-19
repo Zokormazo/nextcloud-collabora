@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+  collabora:
+    image: collabora/code:2.1.4
+    restart: always
+    ports:
+      - "9980:9980"
+    environment:
+      - domain=nextcloud\.domeinua\.com
+      - username=erabiltzailea
+      - password=pasahitza
+      - LC_CTYPE=eu_ES.UTF-8
+    cap_add:
+      - MKNOD
